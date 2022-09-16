@@ -41,14 +41,14 @@ concourse:
 
           ## Comma-separated allow list of GitHub teams.
           ##
-          team: cloudfoundry:bosh-stemcell
-    externalUrl: https://bosh.ci.cloudfoundry.org
+          team: cloudfoundry:app-runtime-deployments-wg
+    externalUrl: https://app-runtime-deployments.ci.cloudfoundry.org
     enableResourceCausality: true
 web:
   service:
     api:
       type: LoadBalancer
-      loadBalancerIP: 34.90.62.88
+      loadBalancerIP: 34.159.40.108
 worker:
   additionalAffinities:
     nodeAffinity:
@@ -75,6 +75,7 @@ worker:
         path: "/mnt/disks/ssd0"
   nodeSelector:
     cloud.google.com/gke-local-ssd: "true"
+  replicas: 6
   resources:
     requests:
       cpu: "3000m"

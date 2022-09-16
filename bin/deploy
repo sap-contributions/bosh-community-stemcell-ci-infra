@@ -3,4 +3,4 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 
 "${SCRIPT_DIR}/bin/create-concourse-namespace"
-kapp deploy -c -a concourse -n concourse -f <(ytt -f config)
+kapp deploy -c -a concourse -n concourse -f <(ytt -f config --data-value google.project_id="$PROJECT_ID" --data-value google.region="$PROJECT_REGION")
