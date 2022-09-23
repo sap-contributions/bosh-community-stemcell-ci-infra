@@ -59,7 +59,7 @@ worker:
               - key: cloud.google.com/gke-nodepool
                 operator: In
                 values:
-                  - "concourse-workers"
+                  - "concourse-workers-8cpu"
   tolerations:
     - key: "workers"
       operator: "Equal"
@@ -78,4 +78,4 @@ worker:
   replicas: 6
   resources:
     requests:
-      cpu: "3000m"
+      cpu: "6000m"
