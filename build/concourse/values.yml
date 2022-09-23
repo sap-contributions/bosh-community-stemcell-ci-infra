@@ -41,7 +41,7 @@ concourse:
 
           ## Comma-separated allow list of GitHub teams.
           ##
-          team: cloudfoundry:app-runtime-deployments-wg
+          team: cloudfoundry:wg-app-runtime-deployments
     externalUrl: https://app-runtime-deployments.ci.cloudfoundry.org
     enableResourceCausality: true
 web:
